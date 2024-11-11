@@ -1,0 +1,19 @@
+//FACTORIAL
+
+#include <stdio.h>
+
+int main()
+{ 
+    int i,a,b=1;//LOCAL VRAIABLE
+    printf("enter number "); 
+    scanf("%d",&a);
+    for(i=1;i <= a; i++)//when condition true, go multi b;
+    {
+       b=b*i;
+      
+    }
+  
+       printf("%d",b); 
+    return 0;//used return type
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
