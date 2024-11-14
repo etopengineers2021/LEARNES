@@ -17,3 +17,18 @@ int main()
     return 0;//used return type
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// shift operators
+#include <stdio.h>
+
+int main()
+{
+    int a,r,l;
+    
+    printf("enter the integer");
+    scanf("%d",&a);
+    l=a<<1; //a=10.0000 1010 its leftshift to 0001 0100 
+    r=a>>1; //a=10.0000 1010 its rightshift to 0000 0101
+    printf("the left shift%d\n",l);
+    printf("the right shift%d\n",r);
+    return 0;
+}
