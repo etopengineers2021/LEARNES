@@ -1,0 +1,19 @@
+See The Storage in datatypes
+#include<stdio.h>
+int main()
+{
+    printf("sizeof int: %ld\n sizeof char: %ld\n sizeof float: %ld\n sizeofdobule:%ld\n",sizeof(int),sizeof(char),sizeof
+    sizeof(float),sizeof(double));
+    return 0;
+}
+
+Using Qualifier see size of memory bit
+#include<stdio.h>
+#include<stdint.h>
+int main()
+{ 
+    
+    printf("sizeof uint: %ld\n sizeof signed char: %ld\n sizeof unsigned char: %ld\n sizeof long long int:%ld\n",sizeof( unsigned int),sizeof(signed char),
+    sizeof(unsigned char),sizeof(long long int));
+    return 0;
+}

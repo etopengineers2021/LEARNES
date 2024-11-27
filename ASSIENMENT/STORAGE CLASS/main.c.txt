@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include"file.h"
+extern int hari;
+//global decleartion
+int global;//(data segment),(zero initializtion)
+int main()
+{
+    //local decleartion
+    //stack segment
+    int local;// compiler based zero(bss) or garbag value()
+   // printf("the calling function work\n");
+  test();
+  /*static int sample; //static key was consider like data segment so they zero no garbeg
+  int hari=15;
+  hari++;*/
+  //printf("the value of hari%d",hari);//its error hari variable is only read because its in onther file
+  printf("the value of local%d\n",local);
+  printf("the value of local%d\n",global);
+    return 0;
+}
+
+
+int test()
+{
+    
+    printf("calling function as working\nn");
+     //int hari;
+ // hari++;
+}

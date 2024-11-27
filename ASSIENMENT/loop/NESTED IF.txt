@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+  int i;
+  scanf("%d",&i);
+  if(i<=1000)
+  {
+      printf("the number is troue");
+  }
+    else if (i>1000)
+    {
+        printf("the number is big");
+        
+    }
+
+
+    else if (
+        printf("invalid input")
+    )
+    return 0;
+}

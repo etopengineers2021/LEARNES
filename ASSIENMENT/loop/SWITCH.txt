@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+
+void main()
+{
+    int a=10;
+    int b=15;
+    
+   int  expersion;
+   
+   scanf("%d",&expersion);
+
+   
+   switch(expersion)//  use int or 'a'-char like this don't(case var+99);
+   {
+       case 1:
+       case 7:
+          printf("addtion  %d\n",a+b);
+           break;
+        case 2:
+          printf("multiplx  %d\n",a*b);
+          break;
+         case 3:
+          printf("subtraion %d\n",a-b);
+          break;
+         case 4:
+         printf("divied %d\n",a / b);
+         break;
+         
+           
+          default :
+           printf("three is invalid operator");
+             break;
+           
+         
+   }
+
+    
+}
