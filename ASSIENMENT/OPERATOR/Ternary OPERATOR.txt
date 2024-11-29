@@ -1,7 +1,7 @@
 #include<stdio.h>
 int  result;
 
-int bignumber(int var1,int var2)//function defition
+int bignumber(int var1,int var2)//function defination
 
 {
 /*
