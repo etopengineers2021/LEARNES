@@ -1,0 +1,38 @@
+#include<stdio.h>
+int  result;
+
+int bignumber(int var1,int var2)//function defition
+
+{
+/*
+    
+
+        if(var1>var2)  //condition check troue if(1)
+         { 
+             return var1;
+         }
+     else                  //conditon will fail print else var1<var2.
+     {
+         return var2;
+    
+
+     } */
+     
+      //ternary operator
+
+  return  ( (var1>var2) ? (var1 ) : (var2)); //maybe var1 is -nagive if autom to print var2
+    }
+          
+int main()
+{  
+    int a,b;
+    printf("enter two numbers");
+    scanf("%d%d",&a,&b);
+   result=bignumber(a,b) ;//calling function
+
+   
+    printf("the bid value%d",result);
+     // printf("the bid value%d",bignumber( a,b));
+    
+    
+}
