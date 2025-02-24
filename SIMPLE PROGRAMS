@@ -32,3 +32,28 @@ int main()
     printf("the right shift%d\n",r);
     return 0;
 }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//find big number using if condition
+#include<stdio.h>
+int main()
+{
+    int a=100000,b=90000,c=300000;
+if(a>b){                       //condition 1 its true
+    if(a>c){                   //condition 2 its true
+        printf("a is big");
+        
+    }
+    else{                      //condition 2 false
+        printf("c is big");
+    } }
+    
+    else if(b>c){            //condition 1 is false
+        printf("b is big");
+        
+    }
+    else{
+        printf("c is big");
+    }
+    return 0;
+}
