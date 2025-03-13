@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+int main()
+{     
+  
+
+       int var=10;
+    int* ptr;
+   ptr = NULL;   // NULL IS DEFINITON BY NULL THAT MAKE SYSTEM CRESH ,
+   // WHEN SYSTEM WAS CRESH AFTER ANY PRINT STATMENT CANT ME PRINT,
+if (ptr == NULL) {
+    printf("that is NULL;");
+} else {
+    printf("system not crash");
+}
+
+    int* ptrr;
+    ptrr=&var;
+    printf("the pointer%d\n",*ptr);
+     printf("the pointer%p\n",ptr);
+     printf("the pointer%p\n",&ptr);
+     printf("\n");
+     printf("the pointer%d\n",*ptrr);
+     printf("the pointer%p\n",ptrr);
+     printf("the pointer%p\n",&ptrr);
+    char str;
+     scanf("the start%c",&str);
+    return 0;
+
+    
+}
