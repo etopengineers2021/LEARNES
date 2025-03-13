@@ -26,6 +26,12 @@ if (ptr == NULL) {
      printf("the pointer%p\n",&ptrr);
     char str;
      scanf("the start%c",&str);
+*/easy solutions
+ What Happens When a Segmentation Fault Occurs?
+*program cresh.
+*not execute after the null line.
+*console window print 
+Segmentation fault (core dumped)
     return 0;
 
     
