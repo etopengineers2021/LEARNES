@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main(){
+    int var=300;
+    
+     char* ptr_a;
+      ptr_a=&var;
+      int pla;
+    
+    /*  printf("the %x   %d\n",var,*ptr_a);
+      printf("the %x   %d\n",*ptr_a,*ptr_a);
+     *(ptr_a)++;
+       printf("the %x   %d\n",var,*ptr_a);
+       *(ptr_a)++;
+        printf("the %x   %d\n",var,*ptr_a);
+        *(ptr_a)++;
+         printf("the %x  %x\n",var,*ptr_a);
+      */
+      while(1){
+          printf("enter the byte to be printed 0 to 3\n");
+          scanf("%d",&pla);
+          if(pla>=0 && pla<=3){
+              printf("%d\n",*(ptr_a+pla));
+              printf("first byte%d\n",*ptr_a);
+          }
+      else {
+          printf("invalid input");
+      }
+          
+      }
+      
+      
+      
+      /*
+    printf("the var %d\n",var);
+    printf("the addres of var%p\n",&var);
+    printf("pointer=%x\n",*ptr_a);
+     printf("pointer value%d\n",*ptr_a);
+     */
+    return 0;
+}

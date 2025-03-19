@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+    int var=10;
+    char vara[]="i  am so cute";
+    int* ptr=&var;
+    printf("the addres of var=%p\n",&var);
+    
+    printf("the  value of var%d\n",var);
+    printf("the befor value of ptr%d\n",*ptr);
+    printf("the befor addres is intilize in%p\n",ptr);
+    printf("the  befor own addres of var%p\n",&ptr);
+    printf("\n");
+    printf("the addres of char vara%p\n",vara);
+    printf("the addres of var[1]%p\n",&vara[1]);
+    ptr=(int*)&vara;//type cast;
+    printf("\n \n");
+printf("the  after value of ptr==%c\n",*ptr);
+    printf("the  after addres is intilize in%p\n",ptr);
+    printf("the after own addres of ptr %p\n",&ptr);
+    ptr=ptr+ 1;
+    //now this addres is incressed by 4 byte because type cast by int;
+    printf("the  increment value of ptr==%c\n",*ptr);
+        printf("the  after addres is intilize in%p\n",ptr);
+         ptr=ptr+ 1;
+            printf("the  after addres is intilize in%p\n",ptr);
+    return 0;
+    
+}
