@@ -1,0 +1,17 @@
+
+
+1. **What is a variable in C?**  
+2. **What is a pointer?**  
+3. **What is the difference between array and pointer?**  
+4. **What is the use of `&` and `*` operators in C?**  
+5. **How do you declare a pointer to an integer?**  
+6. **What will happen if you access a pointer without initializing it?**  
+7. **What is `malloc()` in C? Why is it used?**  
+8. **What is the difference between `malloc()` and `calloc()`?**  
+9. **What does `free()` function do?**  
+10. **What happens if you don’t use `free()` after dynamic memory allocation?**  
+11. **What is the syntax of `realloc()`? What is its purpose?**  
+12. **What is a memory leak?**  
+13. **What are the header files needed for dynamic memory allocation functions?**  
+14. **Can you allocate memory for a 2D array dynamically? How?**
+
