@@ -2,6 +2,6 @@
 int main(){
     char name[10];
     scanf("%s",name);
-    printf("%s",name);// if you read array you don't need & .but individual array we need.
+    printf("%s",name);// if you read array you don't need & .but individual letter we need.
     return 0;
 }
