@@ -4,7 +4,7 @@ struct student{
       float gpa;
     int age;
 
-};
+};     //semicolon
 int main(){
   struct student t1={"John doe",3.50};
   t1.age=20;
