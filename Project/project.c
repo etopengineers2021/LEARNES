@@ -12,8 +12,8 @@ void convert_decimal();
 void bitwise();
 void logicalshift();
 void arithmeticshift();
-void array_circulation();
-void rotate_circulation();
+int array_circulation();
+int rotate_circulation();
 void logical();
   
 enum{
@@ -465,7 +465,7 @@ void arithmeticshift(){
           }
       }
  
-void  array_circulation(){
+int array_circulation(){
          printf("Array circulation: "); 
          int SIZE;                                //inputs
          int index=0;
@@ -474,6 +474,10 @@ void  array_circulation(){
          scanf("%d",&SIZE);
          printf("Enter the elements:");
          int *array=malloc(SIZE * sizeof(int));
+         if(array==NULL){
+          printf("Memory creating fail");
+          return 1;
+         }
 
         for(int i = 0; i < SIZE;i++){
           scanf("%d",&array[i]);
@@ -485,9 +489,10 @@ void  array_circulation(){
         printf("array[%d]=%d\n",index,array[index]);
         index =(index + 1) % SIZE;
     }
+    free(array);
 
 }
-void rotate_circulation(){
+int rotate_circulation(){
   int dum = 0 ;
   printf("1.clock wise \t2.Anticlock wise");
   printf("choice");
@@ -499,7 +504,11 @@ void rotate_circulation(){
     
      printf("Enter the size: ");
      scanf("%d",&SIZE);
-     int array[SIZE];
+       int *array=malloc(SIZE * sizeof(int));
+         if(array==NULL){
+          printf("Memory creating fail");
+          return 1;
+         }
        
      printf("Enter the elements: ");
      for(int i = 0; i < SIZE;i++){
@@ -515,7 +524,9 @@ void rotate_circulation(){
         for(; y < SIZE ;y++ ){
             printf("%d ",array[y]);
         }
+        free(array);
         printf("\n");
+
        
     }
     if(dum==2){
@@ -523,7 +534,11 @@ void rotate_circulation(){
        int SIZE;
        printf("Enter the size: ");
        scanf("%d",&SIZE);
-       int array[SIZE];
+          int *array=malloc(SIZE * sizeof(int));
+         if(array==NULL){
+          printf("Memory creating fail");
+          return 1;
+         }
        printf("Enter the elements: ");
        for(int i = 0; i < SIZE ;i++){
           scanf("%d",&array[i]);
@@ -539,6 +554,7 @@ void rotate_circulation(){
         for(; y < SIZE ; y++ ){
             printf("%d ",array[y]);
         }
+        free(array);
         printf("\n");
 }
     }
