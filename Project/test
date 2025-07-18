@@ -1,0 +1,11 @@
+
+1. Calculator
+    a. Arithmetic operations ( add, sub, mul, div, modulo ( remainder ) )
+    b. conversion operations ( Decimal -> Bin/Hex/Oct, Bin-> dec/Hex/Oct, Hex-> dec/bin/Oct, Oct-> dec/bin/hex )
+    c. bit-wise operations ( AND, OR, ~ NOT, ex-OR, NAND, NOR, shift(Arithmetic, Logical), rotate(Circular, Carry Circular) )
+    c. logical operations only boolen(0 and 1) . ( &&, ||, ! ) .
+2. Tracking
+    a. count of different types of operations ( how many arithmetic, conversion, bit-wise and logical opeartions )
+    b. store all the operations performed to file ( database ).
+
+
