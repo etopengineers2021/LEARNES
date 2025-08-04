@@ -1,5 +1,3 @@
-
-
 1. **What is a variable in C?**  
 2. **What is a pointer?**  
 3. **What is the difference between array and pointer?**  
@@ -15,3 +13,10 @@
 13. **What are the header files needed for dynamic memory allocation functions?**  
 14. **Can you allocate memory for a 2D array dynamically? How?**
 15. **If you Enter the data on keyboard,where are its store first?.**
+16. **How to add two strings?strcat.
+17.**what is stack smashing detected ,when its happan ?.
+18.*What is the use of strcpy[strcpy(s1,"harikrishnan");.
+19.what is Recursion?.
+20.why we need base case on recursion?.
+21.Types of loop?
+21.when call a array  complete arrary not passed only starting.why? (array[5000];)
