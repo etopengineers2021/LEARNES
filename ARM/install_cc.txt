@@ -1,0 +1,120 @@
+//how to install cross-compiler and check its assembly code.
+
+
+
+Open you Termux and use the command
+
+
+
+**sudo apt-get install gcc make binutils gcc-arm-linux-gnueabi**
+
+
+
+if the installation done .
+
+
+
+crete a program file like hello.c write a code
+
+\#include<stdio.h>
+
+int main(){
+
+puts("HEllo WOrld!");
+
+return 0 ;
+
+}
+
+
+
+run this code with help of **gcc hello.c or gcc hello.c -o hello**
+
+
+
+if its execute succesfully check the output = \_\_\_\_\_\_\_\_\_\_.
+
+then use command **file** hello
+
+see the information  about the file .must see the **arch name x86**
+
+
+
+**now run another command**
+
+**arm-linux-gnueabi-gcc   hello.c -o hello**
+
+
+
+**but there is a issue the arm binary code is show this platfrom**
+
+
+
+but you verify  the arm file .using command **file hello**
+
+**must check the archicture .also check little endian .**
+
+
+
+but the main use cause is so stop the execution in assembly stage using -S flag
+
+
+
+**arm-linux-gnueabi-gcc -S hello.c -o hello**
+
+
+
+**to see the assembly file.**
+
+
+
+
+
+**also check readelf .. command**
+
+
+**---------------------------------------------------------------------------------------------**
+
+i got other way solve the above mentioned issue  = but there is a issue the arm binary code is show this platfrom.
+
+
+
+now you have a ARM.s assembly code. 
+
+&nbsp;remember the assambly code .s file must.
+
+**command : install sudo apt install qemy-user**
+
+
+
+now again run the main command with the .s is source file also add {-static}.
+
+ **arm-linux-gnueabi-gcc test.s -o test -static**
+
+
+
+**now , run  qemu-arm ./test**
+
+ **if see any linking error check again.**
+
+**and last check** 
+
+**$ file test**
+
+**test: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, BuildID\[sha1]=01417cf3f28e37a7fef4830f9a8fbabeebf70789, for GNU/Linux 3.2.0, not stripped**
+
+
+
+**you got it .....**
+
+**arm-linux-gnueabi-gcc -nostdlib test1.s -o test1**
+
+**-----------------------------------------------------------------------------------------**
+
+**another special cause that the output not show because the result are store in register in this cause  you need debug**
+
+
+
+
+   
+
