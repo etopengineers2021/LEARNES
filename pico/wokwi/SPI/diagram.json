@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -175.95,
+      "left": 42,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-logic-analyzer", "id": "logic1", "top": -86.05, "left": -153.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GP18", "logic1:D0", "green", [ "h30", "v96", "h-326.4", "v-240" ] ],
+    [ "pico:GP19", "logic1:D1", "green", [ "h39.6", "v76.8", "h-345.6", "v-201.6" ] ],
+    [ "pico:GP17", "logic1:D2", "green", [ "h20.4", "v19.2", "h-297.6", "v-86.4" ] ],
+    [ "pico:GND.4", "logic1:GND", "black", [ "h-153.6", "v19.2", "h-9.6" ] ]
+  ],
+  "dependencies": {}
+}

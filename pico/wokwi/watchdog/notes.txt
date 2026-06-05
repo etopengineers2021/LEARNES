@@ -1,0 +1,50 @@
+Key takeaway: SYSRESETREQ is a "soft reboot" — fast, skips Boot ROM, but still fully resets all hardware peripherals before ResetHandler and main() run again cleanly.
+
+
+
+watchdog_reboot(0, 0, 0)
+        │
+        ▼
+  SYSRESETREQ fired (hardware reset)
+        │
+        ▼
+  ALL peripherals reset (GPIO, DMA, clocks, IRQ — wiped clean)
+        │
+        ▼
+  CPU fetches vector table @ 0x10000000
+        │
+        ├─ [0] → Load initial Stack Pointer
+        └─ [1] → Jump to ResetHandler
+                      │
+                      ▼
+               ResetHandler runs:
+               - Zero out BSS segment
+               - Copy .data from flash → RAM
+               - Call SystemInit() (clocks, PLLs)
+               - Call __libc_init_array() (C++ constructors)
+                      │
+                      ▼
+                   main()   ← YES, starts fresh from top
+
+
+
+🔄 SYSRESETREQ — System Reset Request (what watchdog uses)
+Happens during runtime via software or watchdog:
+watchdog_reboot(0,0,0)
+     │
+     ▼
+  Writes SYSRESETREQ bit in ARM SCB->AIRCR register
+     │
+     ▼
+  CPU signals reset to RP2040 reset controller
+     │
+     ▼
+  PERIPHERAL RESET (GPIO, DMA, UART, SPI, I2C, IRQ — all wiped)
+  CPU core registers reset (PC, SP, LR wiped)
+     │
+     ▼
+  Boot ROM does NOT run again          ← key difference from POR
+     │
+     ▼
+  CPU directly fetches vector table @ 0x10000000
+     └─ Jumps to ResetHandler → main()
