@@ -1,8 +1,0 @@
-this test.txt from vscode 
-
-any modification -> add -> commit -> push .
-git status 
-git add test.txt
-git commit -m " test.txt file added "
-git push origin main 
-git pull
