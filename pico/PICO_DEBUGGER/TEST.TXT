@@ -1,0 +1,6 @@
+PS C:\Users\ishar\git_test\LEARNES>
+Correct commands
+git add pico/PICO_DEBUGGER/
+git status
+git commit -m "add new debugger firmware"
+git push
